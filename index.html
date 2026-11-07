@@ -128,7 +128,7 @@ var S=[
  {bg:C.pink,t:'photo',img:'05',k:'Filtro favorito',m:'Cachorrinho, porque sim',d:4800,tall:1},
  {bg:C.sky,t:'photo',img:'25',m:'E nas chamadas de vídeo também',s:'O filtro é pra sempre.',d:4800,tall:1},
  {bg:C.gold,fg:C.ink,t:'photo',img:'31',k:'Careta do ano',m:'Ninguém faz essa cara igual a ela',d:4800,tall:1},
- {bg:C.forest,t:'duo',a:'33',b:'27',la:'Tentativa nº 1',lb:'Tentativa nº 2',k:'Confeitaria em formação',m:'A primeira virou farofa de chocolate. A segunda virou orgulho.',d:7500},
+ {bg:C.forest,t:'duo',a:'33',b:'27',la:'Tentativa nº 1',lb:'Tentativa nº 2',k:'Confeiteira em formação',m:'A primeira virou farofa de chocolate. A segunda virou orgulho.',d:7500},
  {bg:C.wine,t:'photo',img:'13',m:'Até o sol da tarde faz pose pra ela',d:5500,tall:1},
  {bg:C.plum,t:'video',m:'Jogando o cabelo como ninguém',d:16500,tall:1},
  {bg:C.ink,t:'photo',img:'14',m:'Cena de filme. Literalmente.',d:5000},
@@ -137,21 +137,21 @@ var S=[
  {bg:C.forest,t:'photo',img:'26',m:'Charme de quem sabe que tá linda',d:4800},
  {bg:C.ink,t:'photo',img:'28',k:'Selfie no espelho',m:'Em preto e branco, porque é clássica',d:4800,tall:1},
  {bg:C.sky,t:'video',src:'video3',m:'Modo ensaio fotográfico: ativado',d:26800},
- {bg:C.rose,t:'top',k:'Seu top 3 selfies',d:6500},
+ {bg:C.rose,t:'top',k:'Seu top 3 de selfies',d:6500},
  {bg:C.forest,t:'photo',img:'10',k:'Lugar favorito',m:'Qualquer corredor de livraria',d:5000,tall:1},
  {bg:C.tang,t:'photo',img:'11',k:'Uma das fases dela',m:'A ruiva. E, particularmente, uma das minhas favoritas.',d:5000,tall:1},
  {bg:C.gold,fg:C.ink,t:'photo',img:'12',k:'Look inesquecível',m:'A roupa que você usava quando eu te vi pela primeira vez',d:4800,tall:1},
  {bg:C.forest,t:'photo',img:'21',m:'Rainha da pedra, no meio do mato',s:'Com a luz do fim de tarde.',d:5000,tall:1},
- {bg:C.tang,t:'photo',img:'29',m:'Cabelo ao vento, meus olhos sempre atentos, aos seus movimentos, que piração...',d:4800},
+ {bg:C.tang,t:'photo',img:'29',m:'Cabelo ao vento, meus olhos sempre atentos aos seus movimentos… que piração!',d:4800},
  {bg:C.pink,t:'photo',img:'32',k:'Modo turista',m:'Feira, bandeirolas e vestido longo',d:5000,tall:1},
  {bg:C.plum,t:'photo',img:'30',m:'Capacete na mão, pronta pra mais uma aventura',d:4800,tall:1},
  {bg:C.wine,t:'video',src:'video4',m:'Fofura em movimento',d:15200,tall:1},
  {bg:C.pink,t:'text',h:'Você é a pessoa mais linda que eu conheço.',s:'Por dentro e por fora.',d:4800},
  {bg:C.plum,t:'text',h:'E é um prazer estar ao seu lado em <em>cada</em> momento…',d:4200},
- {bg:C.wine,t:'photo',img:'16',k:'Parceiro de garupa',m:'Da motinha do parque pra minha garupa',d:5500},
+ {bg:C.wine,t:'photo',img:'16',k:'Parceira de garupa',m:'Da motinha do parque pra minha garupa',d:5500},
  {bg:C.forest,t:'photo',img:'20',m:'Estrada, vento no rosto e boas lembranças',d:5000},
- {bg:C.gold,fg:C.ink,t:'photo',img:'24',m:'Eu sempre de olho, é muito amostrada com essa beleza toda.',d:5000,tall:1},
- {bg:C.rose,t:'photo',img:'22',k:'Uma suspresa',m:'Nosso terceiro ano juntos',d:5500,tall:1},
+ {bg:C.gold,fg:C.ink,t:'photo',img:'24',m:'Eu sempre de olho, porque você é muito amostrada com essa beleza toda.',d:5000,tall:1},
+ {bg:C.rose,t:'photo',img:'22',k:'Uma surpresa',m:'Nosso terceiro ano juntos',d:5500,tall:1},
  {bg:C.wine,t:'photo',img:'23',m:'Você merece todas as flores do mundo',d:5500,tall:1},
  {bg:C.tang,t:'photo',img:'17',k:'Bochecha mais beijada do ano',m:'A sua (com essa cara de quem finge que não gosta)',d:5500,tall:1},
  {bg:C.ink,t:'photo',img:'18',m:'Nós.',d:5500,tall:1},
@@ -172,7 +172,7 @@ function render(i){
   if(s.t==='duo'){h+='<div class="duo"><figure><img src="img/'+s.a+'.jpg" alt=""><figcaption>'+s.la+'</figcaption></figure><figure class="d2"><img src="img/'+s.b+'.jpg" alt=""><figcaption>'+s.lb+'</figcaption></figure></div><p class="mid">'+s.m+'</p>';}
   if(s.t==='video'){h+='<div class="frame tall"><video id="vid" src="img/'+(s.src||'video')+'.mp4" playsinline muted></video></div><p class="mid">'+s.m+'</p>';}
   if(s.t==='top'){h+='<div class="list"><div class="row"><span class="n">1</span><img src="img/08.jpg" alt=""><span>O sorriso que derrete qualquer um</span></div><div class="row"><span class="n">2</span><img src="img/09.jpg" alt=""><span>Batom vermelho, modo perigo</span></div><div class="row"><span class="n">3</span><img src="img/07.jpg" alt=""><span>Cara de domingo preguiçoso</span></div></div>';}
-  if(s.t==='final'){h+='<div class="kicker">7 de novembro</div><p class="big" style="font-size:clamp(44px,14vmin,84px)">Feliz <em>aniversário,</em> amor</p><p class="sub">Com todo o meu amor, hoje e em todos os próximos.</p><button class="replay" id="replay">Ver de novo</button>';}
+  if(s.t==='final'){h+='<div class="kicker">7 de novembro</div><p class="big" style="font-size:clamp(44px,14vmin,84px)">Feliz <em>aniversário,</em> amor</p><p class="sub">Com todo o meu amor, hoje e em todos os próximos aniversários.</p><button class="replay" id="replay">Ver de novo</button>';}
   slot.innerHTML='<div class="slide in">'+h+'</div>';
   if(s.t==='video'){var v=document.getElementById('vid');var p=v.play();if(p&&p.catch)p.catch(function(){});}
   if(s.t==='final'){var r=document.getElementById('replay');r.addEventListener('pointerdown',function(e){e.stopPropagation();});r.addEventListener('click',function(e){e.stopPropagation();Song.restart();go(0);});}
